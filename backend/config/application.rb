@@ -21,6 +21,9 @@ Bundler.require(*Rails.groups)
 
 module Backend
   class Application < Rails::Application
+
+    config.time_zone = 'Tokyo'
+    
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
