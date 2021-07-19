@@ -41,3 +41,11 @@ export const formatDateToJa = date => {
   // 日付を日本語表記で返す
   return format(new Date(date), 'M月d日(E)', { locale: ja });
 };
+
+
+export const compareDates = (a, b) => {
+  // 日付の比較を行う
+  if (a.start < b.start) return -1;
+  if (a.start > b.start) return 1;
+  return 0;
+}
