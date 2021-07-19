@@ -18,7 +18,10 @@
         <div v-show="!allDay">
           <TimeForm v-model="endTime" :isError="isInvalidDatetime" />
         </div>
-        <CheckBox v-model="allDay" label="終日" />
+        <span class="px-2">–</span>
+      </DialogSection>
+      <DialogSection>
+        <CheckBox v-model="allDay" label="終日" class="ma-0 pa-0" />
       </DialogSection>
       <DialogSection icon="mdi-card-text-outline">
         <TextForm v-model="description" />
