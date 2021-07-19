@@ -1,5 +1,10 @@
-import { format, addHours } from 'date-fns';
+import { format, addHours, isWithinInterval } from 'date-fns';
 import { ja } from 'date-fns/locale';
+
+export const isDateWithinInterval = (date, startDate, endDate) => {
+  // startDateとendDateの間にdateが含まれるかどうか
+  return isWithinInterval(new Date(date), { start: new Date(startDate), end: new Date(endDate) });
+}
 
 export const getTimeIntervalList = () => {
   // 15分間隔の時間のリストを返す
